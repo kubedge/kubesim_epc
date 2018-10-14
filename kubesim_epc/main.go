@@ -17,13 +17,12 @@ func main() {
   log.Printf("%s", "kubesim_epc is running")
 
 
-  //test reading yaml
-  //This (or close) was working earlier but not after I ran:  sudo go run main.go
-  //from example:  https://stackoverflow.com/questions/30947534/reading-a-yaml-file-in-golang
+  //this example is working, from http://sweetohm.net/article/go-yaml-parsers.en.html
+  //previous example(not working):  https://stackoverflow.com/questions/30947534/reading-a-yaml-file-in-golang
 
   type Config struct {
-      Hits int64 `yaml:"hits"`
-      Time int64 `yaml:"time"`
+      Foo string
+      Bar[] string
   }
 
   yamlFile, err := ioutil.ReadFile("config.yaml")
@@ -33,12 +32,11 @@ func main() {
   }
 
   var config Config
-  //config.Hits = 9999  //DEBUG only
   err = yaml.Unmarshal(yamlFile, &config)
   if err != nil {
       log.Fatalf("Unmarshal: %v", err)
   }
-  log.Printf("hits=%d, time=%d", config.Hits, config.Time)
+  log.Printf("Foo=%s, Bar=%s", config.Foo, config.Bar)
 
   //run server forever
   server.Server()
