@@ -23,7 +23,8 @@ func main() {
 
   var conf config.Configdata
   conf.Config()
-  log.Printf("epc server:  Foo=%s, Bar=%s, Alpha=%d, Beta=%s", conf.Foo, conf.Bar, conf.Alpha, conf.Beta)
+  log.Printf("epc server:  product_name=%s, product_type=%s, product_family=%s, product_release=%s, feature_set1=%s, feature_set2=%s",
+             conf.Product_name, conf.Product_type, conf.Product_family, conf.Product_release, conf.Feature_set1, conf.Feature_set2)
 
   //run server forever
   server.Server()
