@@ -7,7 +7,7 @@ data:
     ---
     product_name: epc
     product_type: 4g
-    product_family: ran
+    product_family: core
     product_release: test
     feature_set1:
     - one
