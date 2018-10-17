@@ -4,7 +4,7 @@
 replicaCount: 1
 nameOverride: kubesim-epc
 nodeSelector:
-  kubedgeNodeType: core
+  kubedgeNodeType: lte-core
 image:
   repository: hack4easy/kubesim_epc-arm32v7
   tag: latest
