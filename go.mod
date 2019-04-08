@@ -1,4 +1,4 @@
-module github.com/kubedge/kubesim_epc/kubesim_epc
+module github.com/kubedge/kubesim_epc
 
 go 1.12
 
