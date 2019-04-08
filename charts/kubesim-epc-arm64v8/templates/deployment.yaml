@@ -55,7 +55,7 @@ spec:
               mountPath: /etc/kubedge/kubesim_conf.yaml
               subPath: kubesim_conf.yaml
               readOnly: true
-            - name: kubedge
+            - name: kubedge 
               mountPath: /etc/kubedge
           resources:
 {{ toYaml .Values.resources | indent 12 }}
@@ -70,6 +70,12 @@ spec:
             items:
              - key: config
                path: kubesim_conf.yaml
+        - name: kubesim-epc-blinkt
+          configMap:
+            name: kubesim-epc-blinkt
+            items:
+             - key: config
+               path: blinkt_conf.yaml
         - name: kubedge
           hostPath:
             path: /etc/kubedge
