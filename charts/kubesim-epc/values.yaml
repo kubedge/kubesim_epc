@@ -21,13 +21,13 @@ nodeSelector:
   kubedgeNodeType: epc-core
 image:
   repository: hack4easy/kubesim_epc
-  tag: latest
+  tag: v0.2.20
   pullPolicy: IfNotPresent
   healthRepository: hack4easy/kubesim_health
-  healthTag: latest
+  healthTag: 0.2.24
   # blinkt container
   blinktRepository: kubedge1/kubesim_blinkt
-  blinktTag: latest
+  blinktTag: 0.2.24
 service:
   name: kubesim-epc
   type: NodePort
