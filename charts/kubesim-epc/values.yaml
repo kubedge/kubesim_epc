@@ -20,13 +20,13 @@ nameOverride: kubesim-epc
 nodeSelector:
   kubedgeNodeType: epc-core
 image:
-  repository: hack4easy/kubesim_epc-arm32v7
+  repository: hack4easy/kubesim_epc
   tag: latest
   pullPolicy: IfNotPresent
-  healthRepository: hack4easy/kubesim_health-arm32v7
+  healthRepository: hack4easy/kubesim_health
   healthTag: latest
   # blinkt container
-  blinktRepository: kubedge1/kubesim_blinkt-arm32v7
+  blinktRepository: kubedge1/kubesim_blinkt
   blinktTag: latest
 service:
   name: kubesim-epc
