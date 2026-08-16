@@ -31,3 +31,6 @@ go.work
 .DS_Store
 .DS_Store
 .DS_Store
+
+# operator-local scratch (checkpoints, handoffs) — dot-local-scratch-convention
+.local/
